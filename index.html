@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        QRcode Generator using javascript
+    </title>
+    <meta  name="viewport" content="width-device-width.initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Generate QRcode</h1>
+
+    <div class="container">
+        <h4>Enter your Text or URL</h4>
+        <form>
+            
+               <input type="text" id="qrText" placeholder="Text or URL"  >
+            <div  >
+                <img  src="" id="qrcode">
+                
+            </div>
+
+            <div>
+                 <button id="generate" onclick="generater()" >QR Code</button>
+            </div>
+        </form>
+    </div>
+
+
+ <script>
+        let text=document.getElementById("qrText");
+        let qrcode=document.getElementById("qrcode");
+        
+        function generater(value){
+            value=text.Value();
+
+         qrcode.src="https://api.mimfa.net/qrcode?value="+value ;
+        
+
+          
+        }
+
+        
+          
+ </script>
+
+
+</body>
+</html>
